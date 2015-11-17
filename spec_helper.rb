@@ -18,7 +18,7 @@ RSpec.configure do |config|
         wait: 0
       }
     }
-    @driver = Appium::Driver.new(config).start_driver
+    @browser = Appium::Driver.new(config).start_driver
   end
 
   config.after(:each) do
@@ -27,10 +27,10 @@ RSpec.configure do |config|
     # Debug failing steps
     binding.pry if (ENV['PRY'] == 'failing' && RSpec.current_example.exception)
     # Capture screenshot if exception
-    @driver.save_screenshot (RSpec.current_example.description + ".png").gsub " ", "_" if (RSpec.current_example.exception && (ENV['SCREENSHOT'] == "true"))
+    @browser.save_screenshot (RSpec.current_example.description + ".png").gsub " ", "_" if (RSpec.current_example.exception && (ENV['SCREENSHOT'] == "true"))
   end
 
   config.after(:all) do
-    @driver.quit unless @driver.nil?
+    @browser.quit unless @browser.nil?
   end
 end
