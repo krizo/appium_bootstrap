@@ -65,7 +65,7 @@ GEM
       rspec-support (~> 3.4.0)
     rspec-support (3.4.0)
     rubyzip (1.1.7)
-    selenium-webdriver (2.48.1)
+    selenium-webdriver (2.45.0)
       childprocess (~> 0.5)
       multi_json (~> 1.0)
       rubyzip (~> 1.0)
@@ -75,8 +75,8 @@ GEM
       chronic_duration (~> 0.10.2)
     toml (0.1.2)
       parslet (~> 1.5.0)
-    watir-webdriver (0.9.1)
-      selenium-webdriver (>= 2.46.2)
+    watir-webdriver (0.7.0)
+      selenium-webdriver (>= 2.45)
     websocket (1.2.2)
     yml_reader (0.5)
 
@@ -92,6 +92,7 @@ DEPENDENCIES
   pry-nav
   require_all
   rspec
+  selenium-webdriver (= 2.45.0)
 
 BUNDLED WITH
    1.10.6
