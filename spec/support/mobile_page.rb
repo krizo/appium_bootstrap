@@ -22,6 +22,6 @@ module MobilePage
     else
       raise('Unsupported mobile platform')
     end
-    Appium.promote_appium_methods(@mobile_platform)
+    Appium.promote_appium_methods(MobilePage)
   end
 end
