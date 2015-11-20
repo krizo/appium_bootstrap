@@ -19,6 +19,7 @@ RSpec.configure do |config|
       }
     }
     @browser = Appium::Driver.new(config).start_driver
+    Appium.promote_appium_methods(RSpec::Core::ExampleGroup)
   end
 
   config.after(:each) do
